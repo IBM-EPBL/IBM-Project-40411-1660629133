@@ -1,0 +1,23 @@
+def temp_humid():
+    if(T>temp_thresh and H>humid_thresh):
+        print ('Temperature is high!!! Humidity is high!!!')
+        print ('Alarm rings!!!!!')
+    elif(T<temp_thresh and H<humid_thresh):
+        print ('Temperature is low and humidity is low')
+    elif(T>temp_thresh and H<humid_thresh):
+        print ('Temperature is high!!!! but humidity is low')
+        print ('Alarm rings due to high Temperature ')
+    elif(T<temp_thresh and H>humid_thresh):
+        print ('Temperature is low but humidity is high!!!')
+    elif(T==temp_thresh ):
+        print ('Temperature is in threshold')
+    elif( H==humid_thresh):
+        print ('Humidity is in threshold')
+    else:
+        print ('Temperature and humidity are in threshold')
+    
+T=int(input('ENTER TEMPERATURE :'))
+H=int(input('ENTER HUMIDITY VALUE :'))
+temp_thresh=65
+humid_thresh=55
+temp_humid()
