@@ -1,0 +1,26 @@
+#TRAFFIC LIGHTS
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BOARD)
+
+Red=7
+Yellow=11
+Green=13
+
+GPIO.setup(Red, GPIO.OUT)
+GPIO.setup(Yellow, GPIO.OUT)
+GPIO.setup(Green, GPIO.OUT)
+
+while True:
+	GPIO.output(Red, True)
+	time.sleep(3)
+	GPIO.output(Red, False)
+	GPIO.output(Yellow, True)
+	time.sleep(1)
+	GPIO.output(Yellow, False)
+	GPIO.output(Green, True)
+	time.sleep(3)
+	GPIO.output(Green, False)
+
+GPIO.cleanup()
